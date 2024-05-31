@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
+
 const About = () => {
   return (
     <div name="about" className="bg-primary h-screen w-full">
@@ -16,6 +18,10 @@ const About = () => {
           Currently, I am focusing on cross-platform developement with the Ionic
           framework
         </p>
+        <div className="group flex cursor-pointer gap-3 item-center justify-center py-2 px-6 mx-auto text-white border-2 bg-primary hover:bg-secondary">
+          <button>View Work</button>
+          <ArrowRightIcon className="text-white w-4 group-hover:rotate-90" />
+        </div>
       </div>
     </div>
   );
