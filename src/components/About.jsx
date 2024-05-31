@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import BaseButton from "./BaseButton";
 
 const About = () => {
   return (
@@ -19,12 +20,9 @@ const About = () => {
           framework
         </p>
         <div className="group flex gap">
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-secondary">
-            View work
-            <span className="group-hover:rotate-90 duration-300">
-              <ArrowRightIcon className="ml-2 w-6 text-white" />
-            </span>
-          </button>
+          <BaseButton text="View work" extraStyles={"font-bold"}>
+            <ArrowRightIcon className="text-white w-6 group-hover:rotate-90 duration-300" />
+          </BaseButton>
         </div>
       </div>
     </div>
