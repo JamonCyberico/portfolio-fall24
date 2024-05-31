@@ -18,9 +18,13 @@ const About = () => {
           Currently, I am focusing on cross-platform developement with the Ionic
           framework
         </p>
-        <div className="group flex cursor-pointer gap-3 item-center justify-center py-2 px-6 mx-auto text-white border-2 bg-primary hover:bg-secondary">
-          <button>View Work</button>
-          <ArrowRightIcon className="text-white w-4 group-hover:rotate-90" />
+        <div className="group flex gap">
+          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-secondary">
+            View work
+            <span className="group-hover:rotate-90 duration-300">
+              <ArrowRightIcon className="ml-2 w-6 text-white" />
+            </span>
+          </button>
         </div>
       </div>
     </div>
