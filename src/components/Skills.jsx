@@ -56,7 +56,7 @@ const Skills = () => {
   ];
 
   return (
-    <div name="skills" className="bg-primary ">
+    <div name="skills" className="bg-primary h-screen w-full">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
           <p className="text-white text-3xl font-bold inline border-b-4 border-pink-700">

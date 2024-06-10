@@ -6,7 +6,7 @@ import BaseButton from "./BaseButton";
 const About = () => {
   return (
     <div name="about" className="bg-primary h-screen w-full">
-      <div className="text-white max-w-[1000px] flex flex-col px-[100px] justify-center h-full">
+      <div className="text-white max-w-[1000px] flex flex-col px-[100px] justify-center h-full mx-auto">
         <p className="text-pink-700">Hi, my name is</p>
         <h1 className="text-6xl md:text-4xl text-white font-bold">
           Anthony Ajami
