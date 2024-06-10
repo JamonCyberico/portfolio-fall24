@@ -9,6 +9,34 @@ import {
   EnvelopeIcon,
   IdentificationIcon,
 } from "@heroicons/react/24/solid";
+import NavSocialItem from "./NavSocialItem.jsx";
+
+const navItems = [
+  {
+    text: "LinkedIn",
+    href: "/",
+    bgColor: "blue-600",
+    Icon: BuildingOfficeIcon,
+  },
+  {
+    text: "GitHub",
+    href: "/",
+    bgColor: "orange-700",
+    Icon: CodeBracketIcon,
+  },
+  {
+    text: "Mail",
+    href: "/",
+    bgColor: "gray-600",
+    Icon: EnvelopeIcon,
+  },
+  {
+    text: "CV",
+    href: "/",
+    bgColor: "purple-600",
+    Icon: IdentificationIcon,
+  },
+];
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -54,33 +82,15 @@ const Navbar = () => {
 
       <div className="fixed flex flex-col left-0 top-[35%]">
         <ul className="text-white">
-          <li className="w-[160px] h-[60px] px-4 flex justify-between items-center bg-blue-600 ml-[-100px] hover:ml-[-10px] duration-300">
-            <a className="flex justify-between items-center w-full" href="/">
-              LinkedIn
-              <BuildingOfficeIcon className="w-8" />
-            </a>
-          </li>
-
-          <li className="w-[160px] h-[60px] px-4 flex justify-between items-center bg-orange-700 ml-[-100px] hover:ml-[-10px] duration-300">
-            <a className="flex justify-between items-center w-full" href="/">
-              GitHub
-              <CodeBracketIcon className="w-8 " />
-            </a>
-          </li>
-
-          <li className="w-[160px] h-[60px] px-4 flex justify-between items-center bg-gray-400 ml-[-100px] hover:ml-[-10px] duration-300">
-            <a className="flex justify-between items-center w-full" href="/">
-              Mail
-              <EnvelopeIcon className="w-8" />
-            </a>
-          </li>
-
-          <li className="w-[160px] h-[60px] px-4 flex justify-between items-center bg-purple-400 ml-[-100px] hover:ml-[-10px] duration-300">
-            <a className="flex justify-between items-center w-full" href="/">
-              CV
-              <IdentificationIcon className="w-8" />
-            </a>
-          </li>
+          {navItems.map((item, index) => (
+            <NavSocialItem
+              key={index}
+              text={item.text}
+              href={item.href}
+              bgColor={item.bgColor}
+              Icon={item.Icon}
+            />
+          ))}
         </ul>
       </div>
     </div>
