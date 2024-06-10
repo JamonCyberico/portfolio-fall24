@@ -1,7 +1,7 @@
-import About from "./components/About";
-import Experience from "./components/Experience";
+import About from "./pages/About";
+import Work from "./pages/Work";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <About />
       <Skills />
-      <Experience />
+      <Work />
     </div>
   );
 }

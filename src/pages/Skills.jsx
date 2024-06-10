@@ -9,7 +9,7 @@ import Node from "../assets/node.png";
 import ReactJS from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
 
-import SkillItem from "./SkillItem";
+import SkillItem from "../components/SkillItem";
 
 const Skills = () => {
   const skills = [

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import BaseButton from "./BaseButton";
+import BaseButton from "../components/BaseButton";
 
 const About = () => {
   return (
@@ -20,7 +20,10 @@ const About = () => {
           framework
         </p>
         <div className="group flex gap">
-          <BaseButton text="View work">
+          <BaseButton
+            text="View work"
+            LeftElement={<span>This is left element</span>}
+          >
             <ArrowRightIcon className="text-white w-6 group-hover:rotate-90 duration-300" />
           </BaseButton>
         </div>
