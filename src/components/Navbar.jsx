@@ -10,30 +10,31 @@ import {
   IdentificationIcon,
 } from "@heroicons/react/24/solid";
 import NavSocialItem from "./NavSocialItem.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 const navItems = [
   {
     text: "LinkedIn",
     href: "/",
-    bgColor: "blue-600",
+    bgColor: "bg-blue-600",
     Icon: BuildingOfficeIcon,
   },
   {
     text: "GitHub",
     href: "/",
-    bgColor: "orange-700",
+    bgColor: "bg-orange-700",
     Icon: CodeBracketIcon,
   },
   {
     text: "Mail",
     href: "/",
-    bgColor: "gray-600",
+    bgColor: "bg-gray-600",
     Icon: EnvelopeIcon,
   },
   {
     text: "CV",
     href: "/",
-    bgColor: "purple-600",
+    bgColor: "bg-purple-600",
     Icon: IdentificationIcon,
   },
 ];
@@ -50,13 +51,17 @@ const Navbar = () => {
         <p className="text-4xl">{LOGO_NAME}</p>
       </div>
 
-      {/* Menu for desktop screens (>= 768px) */}
-      <ul className="hidden md:flex gap-4">
-        <li className="cursor-pointer">About</li>
-        <li className="cursor-pointer">Skills</li>
-        <li className="cursor-pointer">Experience</li>
-        <li className="cursor-pointer">Contact</li>
-      </ul>
+      <div className="flex items-center gap-8">
+        {/* Menu for desktop screens (>= 768px) */}
+        <ThemeToggle />
+
+        <ul className="hidden md:flex gap-4">
+          <li className="cursor-pointer">About</li>
+          <li className="cursor-pointer">Skills</li>
+          <li className="cursor-pointer">Experience</li>
+          <li className="cursor-pointer">Contact</li>
+        </ul>
+      </div>
 
       <div onClick={handleNavClick} className="md:hidden z-10">
         {!mobileNav ? (

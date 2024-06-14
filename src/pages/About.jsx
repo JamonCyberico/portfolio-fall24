@@ -2,10 +2,16 @@ import React from "react";
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import BaseButton from "../components/BaseButton";
+import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
+  const { isDarkMode } = useTheme();
+
   return (
-    <div name="about" className="bg-primary h-screen w-full">
+    <div
+      name="about"
+      className={`${isDarkMode ? "bg-primary" : "bg-white"} h-screen w-full}`}
+    >
       <div className="text-white max-w-[1000px] flex flex-col px-[100px] justify-center h-full mx-auto">
         <p className="text-pink-700">Hi, my name is</p>
         <h1 className="text-6xl md:text-4xl text-white font-bold">
