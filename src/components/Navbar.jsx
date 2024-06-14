@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/solid";
 import NavSocialItem from "./NavSocialItem.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
+import { Link } from "react-scroll";
 
 const navItems = [
   {
@@ -56,10 +57,26 @@ const Navbar = () => {
         <ThemeToggle />
 
         <ul className="hidden md:flex gap-4">
-          <li className="cursor-pointer">About</li>
-          <li className="cursor-pointer">Skills</li>
-          <li className="cursor-pointer">Experience</li>
-          <li className="cursor-pointer">Contact</li>
+          <li className="cursor-pointer">
+            <Link to="about" smooth={true} duration={500}>
+              About
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="skills" smooth={true} duration={500}>
+              Skills
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="work" smooth={true} duration={500}>
+              Work
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
 
