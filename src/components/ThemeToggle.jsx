@@ -7,7 +7,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="rounded px-3 py-2 bg-pink-700 text-white"
+      className="rounded px-3 py-2 bg-secondary text-white"
     >
       {isDarkMode ? "Light Mode" : "Dark Mode"}
     </button>

@@ -26,10 +26,7 @@ const About = () => {
           framework
         </p>
         <div className="group flex gap">
-          <BaseButton
-            text="View work"
-            LeftElement={<span>This is left element</span>}
-          >
+          <BaseButton text="View work">
             <ArrowRightIcon className="text-white w-6 group-hover:rotate-90 duration-300" />
           </BaseButton>
         </div>
