@@ -7,7 +7,7 @@ const Contact = () => {
       className="w-full h-screen bg-primary flex justify-center items-center p-4"
     >
       <form
-        action="https://getform.io/f/jbwxppza"
+        action="https://getform.io/f/"
         method="POST"
         className="flex flex-col max-w-[600px] gap-2"
       >
