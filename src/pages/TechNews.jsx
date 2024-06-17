@@ -1,33 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import useFetchNews from "../hooks/useFetchNews.ts";
 
 const TechNews = () => {
-  const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const { news, loading, error } = useFetchNews();
 
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines",
-          {
-            params: {
-              category: "technology",
-              country: "us",
-              apiKey: "a72136277cc94604ad166d1609274607",
-            },
-          }
-        );
-        setNews(response.data.articles);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchNews();
-  }, []);
+  if (loading) return;
+  if (error) return <div>Error fetching data</div>;
 
   return (
     <div className="w-full min-h-screen bg-primary text-white">
@@ -51,7 +29,7 @@ const TechNews = () => {
                 {article.title}
               </a>
               <p className="text-md">{article.description}</p>
-              <img src={article.urlToImage} />
+              <img src={article.urlToImage} alt={article.title} />
             </div>
           ))}
         </div>
