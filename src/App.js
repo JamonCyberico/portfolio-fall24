@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Navbar from "./components/Navbar";
@@ -8,16 +9,27 @@ import TechNews from "./pages/TechNews";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <ThemeProvider>
-        <Navbar />
-        <About />
-        <Skills />
-        <Work />
-        <Contact />
-        <TechNews />
+        <div>
+          <Routes>
+            <Route
+              index
+              element={
+                <>
+                  <Navbar />
+                  <About />
+                  <Skills />
+                  <Work />
+                  <Contact />
+                </>
+              }
+            />
+            <Route path="/news" element={<TechNews />} />
+          </Routes>
+        </div>
       </ThemeProvider>
-    </div>
+    </BrowserRouter>
   );
 }
 
